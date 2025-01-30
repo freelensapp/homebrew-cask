@@ -8,21 +8,12 @@ cask "freelens" do
   url "https://github.com/freelensapp/freelens/releases/download/v#{version}/Freelens-#{version}-macos-#{arch}.dmg",
       verified: "github.com/freelensapp/freelens/"
   name "Freelens"
-  desc "Free Open Source Kubernetes IDE"
+  desc "Kubernetes IDE"
   homepage "https://freelens.app/"
 
   livecheck do
     url :url
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
+    strategy :github_latest
   end
 
   depends_on macos: ">= :high_sierra"
