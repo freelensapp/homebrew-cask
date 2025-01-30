@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "freelens" do
   arch arm: "arm64", intel: "amd64"
 
@@ -12,7 +9,7 @@ cask "freelens" do
       verified: "github.com/freelensapp/freelens/"
   name "Freelens"
   desc "Free Open Source Kubernetes IDE"
-  homepage "https://www.freelens.app"
+  homepage "https://freelens.app/"
 
   livecheck do
     url :url
