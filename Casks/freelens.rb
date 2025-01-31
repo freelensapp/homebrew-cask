@@ -11,11 +11,6 @@ cask "freelens" do
   desc "Kubernetes IDE"
   homepage "https://freelens.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :high_sierra"
 
   app "Freelens.app"
