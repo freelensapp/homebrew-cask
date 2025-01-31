@@ -1,7 +1,7 @@
 cask "freelens" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.1.3.1"
+  version "0.1.3"
   name "Freelens"
   desc "Kubernetes IDE"
   homepage "https://freelens.app/"
